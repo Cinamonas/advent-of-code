@@ -5,9 +5,11 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "lazy.js": "^0.5.1",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@types/lazy.js": "^0.5.8",
     "@types/lodash": "^4.14.202",
     "bun-types": "latest",
     "prettier": "^3.1.0"

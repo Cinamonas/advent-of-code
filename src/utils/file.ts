@@ -1,10 +1,11 @@
-const readMultilineFile = async (path: string): Promise<string[]> => {
-  const file = await Bun.file(path).text();
+const readFile = async (path: string): Promise<string> => {
+  return Bun.file(path).text();
+};
 
-  return file
+const readMultilineFile = async (path: string): Promise<string[]> =>
+  (await readFile(path))
     .split('\n')
     .map((line) => line.trim())
     .filter(Boolean);
-};
 
-export { readMultilineFile };
+export { readFile, readMultilineFile };
