@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import { parseNumbers } from '../../utils/text.ts';
 
 const LINE_PATTERN = /^Card\s+\d+:\s+(.+?)\s+\|\s+(.+)$/;
 
@@ -7,9 +8,5 @@ const parseLine = (line: string) => {
 
   return _.intersection(parseNumbers(drawnNumbers), parseNumbers(winningNumbers));
 };
-
-function parseNumbers(str: string) {
-  return str.split(/\s+/);
-}
 
 export { parseLine };
