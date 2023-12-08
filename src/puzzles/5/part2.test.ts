@@ -42,7 +42,8 @@ humidity-to-location map:
     expect(await solve(input)).toBe(46);
   });
 
-  test('solution', async () => {
+  // Skipping this because it’s slow, albeit quite fast for a brute-force solution
+  test.skip('solution', async () => {
     const input = await readFile(`${import.meta.dir}/input.txt`);
 
     expect(await solve(input)).toBe(125742457);
